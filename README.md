@@ -16,6 +16,7 @@
   <p align="center">
     The most easiest way to obtain the accelerometer and orientation values of your device in React JS.
     <br />
+    <br />
     .
     <a href="https://reactaccelerometertest.netlify.app">View Demo</a>
     ·
