@@ -1,5 +1,5 @@
 <div id="top"></div>
-[![Version][version]](https://img.shields.io/badge/version-0.1.5-blue)
+[![Version][version]][https://img.shields.io/badge/version-0.1.5-blue]
 [![MIT License][license-shield]][https://github.com/maheshrao98/React-Accelerometer-Value/blob/main/LICENSE.txt]
 <div align="center">
   <h3 align="center">React-Accelerometer-Value</h3>
@@ -90,8 +90,8 @@ yarnpkg test
 
 ## Roadmap
 - [x] Improvise to support latest React versions
-- [] Integrate React Motion
-- [] Build an example app
+- [ ] Integrate React Motion
+- [ ] Build an example app
 
 <p align="right">(<a href="#top">Back to top</a>)</p>
 
