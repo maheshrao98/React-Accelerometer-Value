@@ -1,6 +1,15 @@
 <div id="top"></div>
-![version](https://img.shields.io/npm/v/reactaccelerometervalue)
-![license-shield](https://img.shields.io/github/license/maheshrao98/React-Accelerometer-Value)
+<p align="center">
+    <a href="https://www.npmjs.com/package/reactaccelerometervalue">
+        <img src="https://img.shields.io/npm/v/reactaccelerometervalue"
+            alt="NPM Package"></a>
+    <a href="https://github.com/maheshrao98/React-Accelerometer-Value/blob/main/LICENSE.txt">
+          <img src="https://img.shields.io/github/license/maheshrao98/React-Accelerometer-Value"
+              alt="License"/></a>
+    <a href="https://twitter.com/raomahesh98">
+        <img src="https://img.shields.io/twitter/url?style=social&url=https%3A%2F%2Ftwitter.com%2Fraomahesh98"
+            alt="follow on Twitter"></a>
+</p>
 <div align="center">
   <h3 align="center">React-Accelerometer-Value</h3>
 
@@ -17,7 +26,7 @@
   </p>
 </div>
 
-This is an improvised version of [React Accelerometer](https://www.npmjs.com/package/react-accelerometer). It will run efficiently in the latest verisons of React. I have also made notable changes in the way the accelerometer value is calculated according to the latest [Sensor API Documentation](https://developer.mozilla.org/en-US/docs/Web/API/Sensor_APIs). 
+This is an improvised version of [React Accelerometer](https://www.npmjs.com/package/react-accelerometer) and almost similar to React Native [Expo Sensor](https://www.npmjs.com/package/expo-sensors) . It will run efficiently in the latest versions of React. I have also made notable changes in the way the accelerometer value is calculated according to the latest [Sensor API Documentation](https://developer.mozilla.org/en-US/docs/Web/API/Sensor_APIs). 
 
 ## Installation
 ```js
