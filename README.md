@@ -14,10 +14,9 @@
   <h3 align="center">React-Accelerometer-Value</h3>
 
   <p align="center">
-    The most easiest way to obtain the accelerometer and orientation values of your device.
+    The most easiest way to obtain the accelerometer and orientation values of your device in React JS.
     <br />
-    <br />
-    <br />
+
     <a href="https://reactaccelerometertest.netlify.app">View Demo</a>
     ·
     <a href="https://github.com/maheshrao98/React-Accelerometer-Value/issues">Report Bug</a>
@@ -120,7 +119,7 @@ Don't forget to give the project a star! Thanks again!
 <p align="right">(<a href="#top">Back to top</a>)</p>
 
 ## License
-Distributed under the MIT License. See `LICENSE.txt` for more information.
+Distributed under the MIT License. See [LICENSE.txt](https://github.com/maheshrao98/React-Accelerometer-Value/blob/main/LICENSE.txt) for more information.
 
 <p align="right">(<a href="#top">Back to top</a>)</p>
 
