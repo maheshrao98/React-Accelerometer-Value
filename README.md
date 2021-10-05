@@ -1,6 +1,6 @@
 <div id="top"></div>
-[![Version][version]][https://img.shields.io/npm/v/reactaccelerometervalue]
-[![MIT License][license-shield]][https://img.shields.io/github/license/maheshrao98/React-Accelerometer-Value]
+![version](https://img.shields.io/npm/v/reactaccelerometervalue)
+![license-shield](https://img.shields.io/github/license/maheshrao98/React-Accelerometer-Value)
 <div align="center">
   <h3 align="center">React-Accelerometer-Value</h3>
 
