@@ -19,9 +19,9 @@
     <br />
     <br />
     <a href="https://reactaccelerometertest.netlify.app">View Demo</a>
-    ·
+   
     <a href="https://github.com/maheshrao98/React-Accelerometer-Value/issues">Report Bug</a>
-    ·
+    
     <a href="https://github.com/maheshrao98/React-Accelerometer-Value/issues">Request Feature</a>
   </p>
 </div>
