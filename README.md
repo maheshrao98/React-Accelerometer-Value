@@ -1,5 +1,6 @@
 <div id="top"></div>
-![version](https://img.shields.io/badge/version-0.1.5-blue)
+[![Version][version]](https://img.shields.io/badge/version-0.1.5-blue)
+[![MIT License][license-shield]][https://github.com/maheshrao98/React-Accelerometer-Value/blob/main/LICENSE.txt]
 <div align="center">
   <h3 align="center">React-Accelerometer-Value</h3>
 
@@ -15,15 +16,14 @@
     <a href="https://github.com/maheshrao98/React-Accelerometer-Value/issues">Request Feature</a>
   </p>
 </div>
-# React-Accelerometer-Value
 
 This is an improvised version of [React Accelerometer](https://www.npmjs.com/package/react-accelerometer). It will run efficiently in the latest verisons of React. I have also made notable changes in the way the accelerometer value is calculated according to the latest [Sensor API Documentation](https://developer.mozilla.org/en-US/docs/Web/API/Sensor_APIs). 
 
 ## Installation
 ```js
-npm install --save npm i reactaccelerometervalue
+npm install --save reactaccelerometervalue
 // or
-yarn add react-accelerometer
+yarn add reactaccelerometervalue
 ```
 
 ## Usage
@@ -90,8 +90,8 @@ yarnpkg test
 
 ## Roadmap
 - [x] Improvise to support latest React versions
-- [-] Integrate React Motion
-- [-] Build an example app
+- [] Integrate React Motion
+- [] Build an example app
 
 <p align="right">(<a href="#top">Back to top</a>)</p>
 
