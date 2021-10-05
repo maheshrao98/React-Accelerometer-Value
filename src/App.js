@@ -4,13 +4,13 @@ class ReactAccelorometerValue extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      x: null,
-      y: null,
-      z: null,
+      x: 0,
+      y: 0,
+      z: 0,
       rotation: {
-        alpha: null,
-        beta: null,
-        gamma: null
+        alpha: 0,
+        beta: 0,
+        gamma: 0
       },
       landscape: false
     };
@@ -57,17 +57,16 @@ class ReactAccelorometerValue extends Component {
   handleAcceleration = (event) => {
     var landscape = this.state.landscape;
     var acceleration = event.accelerationIncludingGravity;
-    var rotation = event.rotationRate || null;
+    var rotation = event.rotationRate || 0;
     var x = acceleration.x;
     var y = acceleration.y;
     var z = acceleration.z;
-    
     this.setState({
       rotation: rotation,
       x: landscape ? y : x,
       y: landscape ? x : y,
       z: z,
-      landscape: this.state.landscape.toString()
+      landscape: this.state.landscape
     });
   }
 

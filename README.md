@@ -1,70 +1,124 @@
-# Getting Started with Create React App
+<div id="top"></div>
+![version](https://img.shields.io/badge/version-0.1.5-blue)
+<div align="center">
+  <h3 align="center">React-Accelerometer-Value</h3>
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+  <p align="center">
+    The most easiest way to obtain the accelerometer and orientation values of your device.
+    <br />
+    <br />
+    <br />
+    <a href="https://reactaccelerometertest.netlify.app">View Demo</a>
+    ·
+    <a href="https://github.com/maheshrao98/React-Accelerometer-Value/issues">Report Bug</a>
+    ·
+    <a href="https://github.com/maheshrao98/React-Accelerometer-Value/issues">Request Feature</a>
+  </p>
+</div>
+# React-Accelerometer-Value
 
-## Available Scripts
+This is an improvised version of [React Accelerometer](https://www.npmjs.com/package/react-accelerometer). It will run efficiently in the latest verisons of React. I have also made notable changes in the way the accelerometer value is calculated according to the latest [Sensor API Documentation](https://developer.mozilla.org/en-US/docs/Web/API/Sensor_APIs). 
 
-In the project directory, you can run:
+## Installation
+```js
+npm install --save npm i reactaccelerometervalue
+// or
+yarn add react-accelerometer
+```
 
-### `npm start`
+## Usage
+The React-Accelerometer-Value is a parent component with the value of orientation and accelerometer values are passed as children values. Therefore, to obtain the values the best way is to wrap your component that you need the value to display in as a Child component inside the ReactAccelerometerValue.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+### In App.js
+```js
+import React from "react";
+import ReactAccelorometerValue from 'reactaccelerometervalue'
+import List from './List'
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+class App extends React.Component {
+  constructor(props) {
+    super(props);
+  }
+  render() {
+    return (
+      <div >
+        <ReactAccelorometerValue>
+          <List></List>
+        </ReactAccelorometerValue>
+      </div>
+    );
+  }
+}
+export default App
+```
+### In List.js
+```js
+import React,{Component} from 'react';
 
-### `npm test`
+class List extends Component {
+    constructor(props) {
+        super(props)
+    }
+    render(){
+        console.log(this.props)
+        return(
+            <div>
+                <ul>
+                <li>Is it landscape:{this.props.state.landscape.toString()} </li>
+                <li>x:{this.props.state.x}</li>
+                <li>y:{this.props.state.y}</li>
+                <li>z:{this.props.state.z}</li>
+                <li>rotation alpha:{this.props.state.rotation.alpha}</li>
+                <li>rotation beta:{this.props.state.rotation.beta}</li>
+                <li>rotation gamma:{this.props.state.rotation.gamma}</li>
+                </ul>
+            </div>
+        )
+    }
+}
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+export default List;
+```
+<p align="right">(<a href="#top">Back to top</a>)</p>
 
-### `npm run build`
+## Test
+```js
+npm test
+// or
+yarnpkg test
+```
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Roadmap
+- [x] Improvise to support latest React versions
+- [-] Integrate React Motion
+- [-] Build an example app
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+<p align="right">(<a href="#top">Back to top</a>)</p>
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## Contributing
 
-### `npm run eject`
+Contributions are what make the open source community such an amazing place to learn, inspire, and create. Any contributions you make are **greatly appreciated**.
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+If you have a suggestion that would make this better, please fork the repo and create a pull request. You can also simply open an issue with the tag "enhancement".
+Don't forget to give the project a star! Thanks again!
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+1. Fork the Project
+2. Create your Feature Branch (`git checkout -b feature/AmazingFeature`)
+3. Commit your Changes (`git commit -m 'Add some AmazingFeature'`)
+4. Push to the Branch (`git push origin feature/AmazingFeature`)
+5. Open a Pull Request
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+<p align="right">(<a href="#top">Back to top</a>)</p>
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+## License
+Distributed under the MIT License. See `LICENSE.txt` for more information.
 
-## Learn More
+<p align="right">(<a href="#top">Back to top</a>)</p>
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## Contact
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+Author - [@raomahesh98](https://twitter.com/raomahesh98) - raomahesh610@gmail.com
 
-### Code Splitting
+Project Link: [https://github.com/maheshrao98/React-Accelerometer-Value](https://github.com/maheshrao98/React-Accelerometer-Value)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+<p align="right">(<a href="#top">Back to top</a>)</p>
