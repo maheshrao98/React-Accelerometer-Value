@@ -1,5 +1,5 @@
 {
-  "name": "react-accelerometer-value",
+  "name": "reactaccelerometervalue",
   "description": "The most easiest way to obtain the accelerometer and orientation values of your device in React JS.",
   "version": "0.1.6",
   "private": false,
