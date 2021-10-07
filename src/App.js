@@ -1,4 +1,5 @@
 import React,{Component, cloneElement, Children } from 'react'
+import './App.css';
 
 class ReactAccelorometerValue extends Component {
   constructor(props) {
@@ -12,36 +13,33 @@ class ReactAccelorometerValue extends Component {
         beta: 0,
         gamma: 0
       },
-      landscape: false
+      landscape: false,
+      noaccess: false
     };
   };
 
   componentDidMount(){
     this.handleOrientation();
-    if (typeof DeviceMotionEvent.requestPermission === 'function') {
-      DeviceMotionEvent.requestPermission()
-        .then(permissionState => {
-          if (permissionState === 'granted') {
-            window.addEventListener('devicemotion', this.handleOrientation);
-          }
-        })
-        .catch(console.error);
+    if (typeof DeviceMotionEvent.requestPermission === 'function' || typeof DeviceOrientationEvent.requestPermission === 'function') {
+      this.setState({noaccess:true})
+      window.addEventListener('orientationchange', this.handleOrientation);
     } else {
       // handle regular non iOS 13+ devices
       window.addEventListener('devicemotion', this.handleAcceleration);
-    }
-    if (typeof DeviceOrientationEvent.requestPermission === 'function') {
-      DeviceOrientationEvent.requestPermission()
-        .then(permissionState => {
-          if (permissionState === 'granted') {
-            window.addEventListener('deviceorientation', this.handleOrientation);
-          }
-        })
-        .catch(console.error);
-    } else {
-      // handle regular non iOS 13+ devices
       window.addEventListener('orientationchange', this.handleOrientation);
     }
+  }
+
+  handleSubmit = () => {
+    console.log("hello")
+    window.DeviceMotionEvent.requestPermission()
+      .then(permissionState => {
+        if (permissionState === 'granted') {
+          window.addEventListener('devicemotion', this.handleOrientation);
+          this.setState({noaccess:false})
+        }
+      })
+      .catch(console.error);
   }
 
   componentWillUnmount(){
@@ -71,8 +69,25 @@ class ReactAccelorometerValue extends Component {
   }
 
   render() {
+    const renderBanner = () => {
+      if(this.state.noaccess) {
+        return (
+          <div className="DeviceMotionRequestBanner">
+            <form onSubmit={this.handleSubmit}>
+              <h3>Enable DeviceMotion on your device?</h3>
+              <p>This app requires you to enable the DeviceMotion event on yout device.</p>
+              <div style={{position:"relative",zIndex:"1"}}>
+                <button className="DeviceMotionRequestButton">Enable</button>
+              </div>
+            </form>
+          </div>
+        )
+      }
+    }
+
     return (
         <div>
+        {renderBanner()}
         {
             Children.map(this.props.children, child => {
                 return cloneElement(child, { state: this.state });

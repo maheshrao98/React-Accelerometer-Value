@@ -98,8 +98,8 @@ yarnpkg test
 
 ## Roadmap
 - [x] Improvise to support latest React versions
-- [ ] Integrate React Motion
-- [ ] Build an example app
+- [ ] Resolve IOS 13+ Gyroscope Permission Request Issues
+- [ ] Integrate Polyfill to migrate from the old DeviceOrientationEvent/DeviceMotionEvent to the new API
 
 <p align="right">(<a href="#top">Back to top</a>)</p>
 
